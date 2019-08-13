@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <style>
+        body {
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: linear-gradient(270deg, #e65575, rgb(254, 95, 129));
+            font-family: 'Quicksand', sans-serif;
+            margin: 0px;
+            padding: 0px;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+        input{
+            padding:15px;
+            margin:0px;
+            border-radius: 100px 0px 00px 100px;
+            width:40vw;
+            font-size: 20px;
+            border-style: none;
+            background: #ffcfda;
+            font-family: 'Quicksand', sans-serif;
+        }
+        button{
+            font-family: 'Quicksand', sans-serif;
+            margin:0px;
+            padding:15px;
+            color:white;
+            text-transform: uppercase;
+            font-size: 20px;
+            border-radius: 0px 100px 100px 0px;
+            width:350px;
+            border-style: none;
+            border-left:2px solid #e65575;            
+            background:#c03c59;
+            cursor: pointer;
+        }
+        @media(max-width: 480px){
+            form{
+            flex-direction: column;
+            }
+            input, button{
+                border-radius: 50px;
+                width:100%;
+                margin:20px 0px;
+            }
+            img{
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        var styles = [
+    'background: linear-gradient(#D33106, #571402)'
+    , 'border: 1px solid #3E0E02'
+    , 'color: white'
+    , 'display: block'
+    , 'text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3)'
+    , 'box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 5px 3px -5px rgba(0, 0, 0, 0.5), 0 -13px 5px -10px rgba(255, 255, 255, 0.4) inset'
+    , 'line-height: 40px'
+    , 'text-align: center'
+    , 'font-weight: bold'
+    , 'font-size: 40px'
+].join(';');
+
+console.log('%c Wish i knew better ;(                                              ', styles);
+    </script>
+</head>
+
+<body>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="#"><img src="https://i.imgur.com/mUnUWxH.png" style="z-index:999 ; position: absolute; bottom:5px ; right:5px ; width:80px;"></a>
+    <form action="city" method="post">
+        <input type="text" name="cityName" placeholder="Enter the city">
+        <button type="submit">Submit</button>
+        <!--Stuffs used: NodeJS , Express , openweather-api-->
+    </form>
+</body>
+
+</html>

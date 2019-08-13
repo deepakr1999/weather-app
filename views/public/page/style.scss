@@ -1,0 +1,154 @@
+
+$primary : #fd2171;
+$secondary: #FF8D8D;
+$ternary : #df3565;
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    width:100vw;
+    height:100vh;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    .body_wrapper{
+        background: linear-gradient(180deg ,$secondary,$primary);
+        width:100%;
+        height:100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .bg{
+            position: absolute;
+            bottom:-300px;
+            opacity: 0.2;
+        }
+        .bg2{
+            position: absolute;
+            top:-200px;
+            opacity: 0.2;
+            transform: rotate(180deg);
+            transform: rotateZ(180deg);
+        }
+    }
+    .top_part{
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+        p{
+            padding:15px;
+            margin:0;
+            color:white;
+            font-size: 25px;
+            font-weight: 100;
+        }
+        .bold{
+            font-weight: 700;
+            text-transform: uppercase;
+            background: white;
+            border-radius: 35px;
+            padding:5px 15px;
+            color:$primary;
+            box-shadow: 4px 5px 20px 1px rgba(0, 0, 0, 0.4)
+        }
+    }
+    .middle_part{
+        margin-top: 45px;
+        width:100%;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        .menu1 , .menu2 , .menu3{
+            min-width:260px;
+            max-width: 25%;
+            margin: 0px 4%;
+            height: 60%;
+            background:white;
+            border-radius: 15px;
+            box-shadow: 14px 17px 13px 2px rgba(0, 0, 0, 0.116);
+            z-index: 1;
+        }
+        .menu2{
+            transform: scale(1.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .degree{
+                background:linear-gradient(270deg, #e65575, rgb(254, 95, 129));
+                font-size: 50px;
+                margin:0px;
+                width:100%;
+                text-align: center;
+                color:white;
+                font-weight: lighter;
+                margin-bottom: 10px;
+            }
+            .desc{
+                margin-top: 40px;
+                font-size:20px;
+                text-transform: uppercase;
+                color:rgb(53, 53, 53);
+                letter-spacing: 2px;
+            }
+            .img_cont{
+                width:60%;
+                height: 25%;
+                background:linear-gradient(270deg, rgba($ternary , 0.8), rgba($primary, 0.5));
+                box-shadow: 14px 17px 13px 2px rgba(0, 0, 0, 0.116);
+                border-radius: 7px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 100px;
+                }
+            }
+        }
+        .menu1 , .menu3{
+            padding:0 15px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .texts{
+                color:$primary;
+                margin-left:5px;
+                text-align: left;
+                font-size: 25px;
+                line-height: 10px;
+                text-transform: uppercase;
+            }
+        }
+        
+    }
+}
+
+@media ( max-width: 480px) {
+    body{
+        overflow: auto;
+        height: auto;
+        width:100vw;
+        .body_wrapper{
+            width: 100vw;
+            .middle_part{
+                flex-direction: column;
+                height: auto;
+                .menu1 , .menu2 , .menu3{
+                    width:80%;
+                    margin :25px;
+                    height: 450px;
+                }
+                .menu2{
+                    transform: scale(1);
+                }
+            }
+
+        }
+        .bg{
+            display: none;
+        }
+    }
+}
